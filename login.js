@@ -26,6 +26,10 @@ export default function LoginScreen({ navigation }) {
                 usersRef.doc(uid)
                     .get()
                     .then(firebaseData => {
+                        if (!firebaseData.exists) {
+                            alert("No record found!");
+                            return;
+                        }
                         const user = firebaseData.data();
                         //navigate to Home page and send user data
                         navigation.navigate("Home", { user });
