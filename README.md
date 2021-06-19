@@ -1,5 +1,8 @@
 # firestore-login-code
 
+* Using react-native-elements for UI
+* and React Navigation for navigation
+
 ```javascript
 import React, { useState } from 'react';
 import { ThemeProvider, Text, Input, Button, Card } from 'react-native-elements';
